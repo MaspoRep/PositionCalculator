@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur de taille de position</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="header">
+            <h1>Calculateur de taille de position</h1>
+            <div class="theme-toggle">
+                <button id="theme-toggle-btn">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <form id="position-size-form">
+            <div class="input-group">
+                <label for="capital">Capital</label>
+                <input type="number" id="capital" value="10000">
+            </div>
+            
+            <div class="input-group">
+                <label for="risk-per-position">Risque par position (%)</label>
+                <input type="number" id="risk-per-position" value="1">
+            </div>
+            
+            <div class="input-group">
+                <label for="entry-price">Prise de position</label>
+                <input type="number" id="entry-price" value="2.4879">
+            </div>
+            
+            <div class="input-group">
+                <label for="stop-loss">Stop-loss</label>
+                <input type="number" id="stop-loss" value="2.208">
+            </div>
+            
+            <button id="calculate-button" type="button">Calculate</button>
+        </form>
+        
+        <div id="results">
+            <h2>Résultats</h2>
+            <div class="result-item">
+                <div>Nombre de lots à acheter:</div>
+                <span id="lots-value">-</span>
+            </div>
+            <div class="result-item">
+                <div>Taille de la position:</div>
+                <span id="position-size-value">-</span>
+            </div>
+            <div class="result-item">
+                <div>Valeur du R:</div>
+                <span id="r-value">-</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
